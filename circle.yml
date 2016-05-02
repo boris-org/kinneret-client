@@ -1,5 +1,10 @@
 test:
   override:
-    - node node_modules/karma/bin/karma start test/karma.conf.js  --single-run
+    - npm run test-headless-single-run
   post:
     - find . -type f -regex ".*/test_out/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/ \;
+deployment:
+  codecov:
+    branch: /.*/
+    commands:
+      - bash <(curl -s https://codecov.io/bash)
