@@ -8,7 +8,9 @@ sudo apt-get install -y nodejs
 sudo apt-get install -y build-essential
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 #sudo ln -s /usr/bin/nodejs /usr/bin/node
-sudo npm install bower
+#sudo npm install bower
 
 mkdir -p /home/ubuntu/client
-cp -R ./* /home/ubuntu/client
+# cp -R ./* /home/ubuntu/client
+cd /home/ubuntu/client
+git clone https://github.com/boris-org/kinneret-client.git
