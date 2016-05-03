@@ -2,11 +2,13 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
+  - location: cd_stopapp.sh
+    runas: ubuntu
   - location: cd_setenvironment.sh
     runas: ubuntu
   AfterInstall:
   - location: cd_startapp.sh
     runas: ubuntu
   ValidateService:
-  - location: cd_stopapp.sh
+  - location: cd_setupvalidation.sh
     runas: ubuntu
