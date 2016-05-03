@@ -3,10 +3,10 @@ os: linux
 hooks:
   BeforeInstall:
   - location: cd_setenvironment.sh
-    runas: root
+    runas: ubuntu
   AfterInstall:
   - location: cd_startapp.sh
-    runas: root
+    runas: ubuntu
   ValidateService:
   - location: cd_stopapp.sh
-    runas: root
+    runas: ubuntu
