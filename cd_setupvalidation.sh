@@ -9,5 +9,6 @@ function validate {
    fi
 }
 
+sleep 10
 curl -sIL -XGET -H 'Content-Type: application/json' http://localhost:8000/app/ | grep HTTP | grep 200
 validate $? 'SUCCESS: Kinneret-client is up and running' 'ERROR: Kinneret-client is NOT available'
