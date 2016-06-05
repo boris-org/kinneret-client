@@ -8,12 +8,12 @@ deployment:
   staging:
     branch: master
     codedeploy:
-      kinneret-client-boris:
+      doc_boris_cdapp_client:
         application_root: /
         region: ap-southeast-1
         revision_location:
           revision_type: S3
           s3_location:
-            bucket: boris-cd-test
+            bucket: doc-boris-codedeploy
             key_pattern: kinneret-client/kinneret-client-{BRANCH}-{SHORT_COMMIT}
-        deployment_group: kcb-group
+        deployment_group: doc_boris_depgroup2
