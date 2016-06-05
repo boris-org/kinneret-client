@@ -1,5 +1,16 @@
 version: 0.0
 os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/client
+permissions:
+  - object: /home/ubuntu/client
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - file
 hooks:
   BeforeInstall:
   - location: cd_stopapp.sh
