@@ -15,7 +15,3 @@ mkdir -p /home/ubuntu/client
 # cp -R ./* /home/ubuntu/client
 cd /home/ubuntu/client
 git clone https://github.com/boris-org/kinneret-client.git
-cd /home/ubuntu/client/kinneret-client
-npm install bower
-npm install
-npm start
